@@ -1,0 +1,11 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <template for:each={listOfAccountName} for:item="account">
+        <div key={account.Id} class="slds-col slds-size_4-of-12">
+            <lightning-card  title={account.Id}>               
+                <p class="slds-p-horizontal_small">{account.Name}</p>             
+            </lightning-card>
+        </div>
+        </template>
+    </div>
+</template>

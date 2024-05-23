@@ -1,0 +1,11 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <template for:each={sampleListOfRecords} for:item="item">
+        <div key={item} class="slds-col slds-size_4-of-12">
+            <lightning-card  title={item}>               
+                <p class="slds-p-horizontal_small">Card body</p>             
+            </lightning-card>
+        </div>
+        </template>
+    </div>
+</template>

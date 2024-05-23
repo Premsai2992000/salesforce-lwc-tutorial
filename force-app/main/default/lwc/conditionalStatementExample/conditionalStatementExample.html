@@ -1,0 +1,8 @@
+<template>
+    <lightning-button variant="brand" label="show/hide button" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    <template if:true={isVisible}>
+        <lightning-card title="Hi">
+            <p class="slds-p-horizontal_small">if you click the button you'll not see me again!</p>        
+        </lightning-card>
+    </template>
+</template>
