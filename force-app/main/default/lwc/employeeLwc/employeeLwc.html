@@ -1,0 +1,9 @@
+<template>
+    <lightning-card  title="Employee Details" icon-name="action:new_note">
+        <h2>Employee Details</h2>
+        <lightning-input type="text" label="Employee Name" placeholder="type here..." onchange={empNameHandler}></lightning-input>
+        <lightning-input type="text" label="Employee Email" placeholder="type here..." onchange={empEmailHandler}></lightning-input>
+        <lightning-input type="text" label="Employee phone" placeholder="type here..." onchange={empPhoneHandler}></lightning-input>
+        <lightning-button variant="brand" label="Add" title="Create New Employee" onclick={addEmployeeHandler} class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+</template>
