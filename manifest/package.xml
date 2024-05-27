@@ -30,19 +30,19 @@
     </types>
     <types>
         <members>*</members>
-        <name>StaticResource</name>
-    </types>
-    <types>
-        <members>*</members>
         <name>CustomObject</name>
     </types>
-    <!--<types>
+    <types>
         <members>Employee__c-Employee Layout</members>
         <name>Layout</name>
     </types>
     <types>
         <members>myFirstPermSet</members>
         <name>PermissionSet</name>
-    </types>-->
-    <version>57.0</version>
+    </types> 
+    <types>
+        <members>*</members>
+        <name>StaticResource</name>
+    </types>
+    <version>59.0</version>
 </Package>
