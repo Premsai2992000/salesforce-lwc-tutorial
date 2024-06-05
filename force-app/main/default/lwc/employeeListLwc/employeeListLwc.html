@@ -32,8 +32,8 @@
                         <td>{emp.Employee_Phone__c}</td>
                         <td>{emp.Employee_Email__c}</td>
                         <td>
-                            <lightning-button data-id={emp.Id} variant="brand" label="Edit" title="Primary action" onclick={recordEdit} class="slds-m-left_x-small"></lightning-button>
-                            <lightning-button data-id={emp.Id} style="padding-left: 10px;" variant="destructive" label="Delete" title="Destructive action" onclick={recordDelete} class="slds-m-left_x-small"></lightning-button>
+                            <lightning-button data-id={emp.Name} variant="brand" label="Edit" title="Primary action" onclick={recordEdit} class="slds-m-left_x-small"></lightning-button>
+                            <lightning-button data-id={emp.Name} style="padding-left: 10px;" variant="destructive" label="Delete" title="Destructive action" onclick={recordDelete} class="slds-m-left_x-small"></lightning-button>
                          </td>
                     </tr>
                 </template>

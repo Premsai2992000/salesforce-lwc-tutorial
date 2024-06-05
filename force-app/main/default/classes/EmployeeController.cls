@@ -18,9 +18,9 @@ public with sharing class EmployeeController {
     }
 
     @AuraEnabled
-    public void deleteRecord(string recordId){
+    public void deleteRecord(string recordName){
         try {
-            Employee__c emp = [SELECT Id from Employee__C where Id =:recordId];
+            Employee__c emp = [SELECT Id from Employee__C where Name =:recordName];
             delete emp;
         } catch (Exception e) {
             throw new AuraHandledException(e.getMessage());

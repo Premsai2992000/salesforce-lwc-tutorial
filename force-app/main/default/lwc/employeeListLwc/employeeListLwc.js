@@ -31,29 +31,31 @@ export default class EmployeeListLwc extends LightningElement {
 
     recordEdit(){
         console.log('event')
-        console.log('edit',event.target.dataset.id);
+        console.log('edit',event.currentTarget.dataset.id);
     }
 
     recordDelete(event){
-        console.log('delete');
-        console.log('delete',event.target.dataset.id);
-        console.log('typeof id',typeof(event.target.dataset.id));
-        const deleteId = event.target.dataset.id;
-        deleteRecord(deleteId).then((result) => {
+        console.log('delete',event.currentTarget.dataset.id);
+        console.log('typeof id',typeof(event.currentTarget.dataset.id));
+        const deleteId = event.currentTarget.dataset.id;
+        console.log('delete',deleteId);
+        deleteRecord({recordName: deleteId}).then((result) => {
             console.log('delete' - result)
             Toast.show({                
-                label: `New Employee ${event.target.dataset.name} added`,
+                label: `Employee deleted - Employee name ${deleteId}`,
                 mode: 'dismissiable',
                 variant: 'success'
             });
         }).catch((error) => {
             console.log('delete error',error);
             Toast.show({
-                label: `Error adding new Employee record - ${event.target.dataset.name}`,
+                label: `Error deleting Employee - ${deleteId}`,
                 mode: 'dismissiable',
                 variant: 'error'
             });
-        })
+        }).finally(() => {
+            this.isLoading = false;
+        });
     }
 
 }
