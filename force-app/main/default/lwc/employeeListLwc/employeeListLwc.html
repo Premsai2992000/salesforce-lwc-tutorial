@@ -1,0 +1,43 @@
+<template>
+    <div class="slds-box slds-theme_default">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+            <thead>
+                <tr>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Employee Id">Id</div>
+                      </th>
+                      <th class="" scope="col">
+                        <div class="slds-truncate" title="Employee Name">Name</div>
+                      </th>
+                      <th class="" scope="col">
+                        <div class="slds-truncate" title="Phone Number">Phone Number</div>
+                      </th>
+                      <th class="" scope="col">
+                          <div class="slds-truncate" title="Linkedin Url">Linkedin Url</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Email">Email</div>
+                          </th>
+                          <th class="" scope="col">
+                            <div class="slds-truncate" title="Email">Actions</div>
+                          </th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={dataList} for:item="emp">
+                    <tr key={emp.Id}>
+                        <td>{emp.Id}</td>
+                        <td>{emp.Name}</td>
+                        <td>{emp.LinkedIn_Url__c}</td>
+                        <td>{emp.Employee_Phone__c}</td>
+                        <td>{emp.Employee_Email__c}</td>
+                        <td>
+                            <lightning-button data-id={emp.Id} variant="brand" label="Edit" title="Primary action" onclick={recordEdit} class="slds-m-left_x-small"></lightning-button>
+                            <lightning-button data-id={emp.Id} style="padding-left: 10px;" variant="destructive" label="Delete" title="Destructive action" onclick={recordDelete} class="slds-m-left_x-small"></lightning-button>
+                         </td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </div> 
+</template>
